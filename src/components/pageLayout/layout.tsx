@@ -30,7 +30,7 @@ const Layout = ({ children }: Props) => {
           <Link to="/about">About</Link>
         </div>
       </nav>
-      <main className="bg-slate-50">{children}</main>
+      <main>{children}</main>
     </Fragment>
   )
 }

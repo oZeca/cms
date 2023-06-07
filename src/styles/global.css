@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    @apply bg-slate-50
+}
+
 .header{
  @apply flex items-center justify-between py-4
 }
