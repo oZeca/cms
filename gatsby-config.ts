@@ -1,9 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
 
-// module.exports = {
-//   pathPrefix: "/cms",
-// }
-
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `cmsTest`,

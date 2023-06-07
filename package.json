@@ -12,7 +12,6 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && main -d public",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
