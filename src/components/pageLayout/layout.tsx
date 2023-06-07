@@ -31,6 +31,18 @@ const Layout = ({ children }: Props) => {
         </div>
       </nav>
       <main>{children}</main>
+      <footer className="contained pb-20">
+        <div className="flex justify-between">
+          <div>
+            <p className="text-gray-300">923425839</p>
+            <p className="text-gray-300">projects@mail.com</p>
+          </div>
+          <div>
+            <p className="text-gray-300">@linkedin</p>
+            <p className="text-gray-300">@instagram</p>
+          </div>
+        </div>
+      </footer>
     </Fragment>
   )
 }
