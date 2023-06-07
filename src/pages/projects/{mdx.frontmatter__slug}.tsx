@@ -11,7 +11,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 
   return (
     <Layout pageTitle="Home Page">
-      <>
+      <div className="container">
         <GatsbyImage image={image!} alt={"logo"} className="w-14 mb-10" />
         <h1 className="text-3xl font-bold text-gray-700 mb-6">
           {/* @ts-ignore */}
@@ -19,7 +19,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
         </h1>
         {/* @ts-ignore */}
         <p className="text-gray-500">{data.mdx.frontmatter.date}</p>
-      </>
+      </div>
     </Layout>
   )
 }

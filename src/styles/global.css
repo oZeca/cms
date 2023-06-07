@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header{
+ @apply flex items-center justify-between py-4
+}
+
+.container{
+    @apply max-w-screen-lg mx-auto
+}

@@ -8,7 +8,7 @@ import Layout from "../components/pageLayout/layout"
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   return (
     <Layout pageTitle="Home Page">
-      <>
+      <div className="container">
         <h1 className="text-3xl font-bold text-gray-700 mb-6">Projects</h1>
         <ul>
           {data.allMdx.nodes.map((node, idx) => (
@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
             </Link>
           ))}
         </ul>
-      </>
+      </div>
     </Layout>
   )
 }
