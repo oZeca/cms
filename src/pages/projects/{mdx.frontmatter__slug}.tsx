@@ -5,13 +5,13 @@ import { DataProps } from "../../types/dataQuery"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../../components/pageLayout/layout"
 
-const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
+const ProjectPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   // @ts-ignore
   const image = getImage(data.mdx.frontmatter.image)
 
   return (
-    <Layout pageTitle="Home Page">
-      <div className="container">
+    <Layout>
+      <div className="section contained">
         <GatsbyImage image={image!} alt={"logo"} className="w-14 mb-10" />
         <h1 className="text-3xl font-bold text-gray-700 mb-6">
           {/* @ts-ignore */}
@@ -24,9 +24,12 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default ProjectPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = ({ data }) => (
+  /* @ts-ignore */
+  <title>{data.mdx.frontmatter.title}</title>
+)
 
 export const query = graphql`
   query ($id: String) {

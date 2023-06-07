@@ -7,21 +7,29 @@ import Layout from "../components/pageLayout/layout"
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   return (
-    <Layout pageTitle="Home Page">
-      <div className="container">
-        <h1 className="text-3xl font-bold text-gray-700 mb-6">Projects</h1>
-        <ul>
-          {data.allMdx.nodes.map((node, idx) => (
-            <Link to={`/projects/${node.frontmatter.slug}`}>
-              <li
-                className="text-gray-500 mb-6 mb-4 cursor-pointer hover:text-gray-900"
+    <Layout>
+      <div className="section contained">
+        <div className="grid grid-cols-3 gap-10">
+          {data.allMdx.nodes.map((node, idx) => {
+            const image = getImage(node.frontmatter.image)
+            return (
+              <Link
+                to={`/projects/${node.frontmatter.slug}`}
+                className="flex flex-col items-center justify-center"
                 key={idx}
               >
-                {node.frontmatter.title} - {node.frontmatter.date}
-              </li>
-            </Link>
-          ))}
-        </ul>
+                <GatsbyImage
+                  image={image!}
+                  alt={"project image"}
+                  className="w-14 mb-8"
+                />
+                <p className="text-gray-500 cursor-pointer hover:text-gray-900">
+                  {node.frontmatter.title} - {node.frontmatter.date}
+                </p>
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </Layout>
   )
@@ -39,6 +47,11 @@ export const query = graphql`
           date(formatString: "MMMM D, YYYY")
           title
           slug
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

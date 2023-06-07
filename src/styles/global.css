@@ -6,6 +6,10 @@
  @apply flex items-center justify-between py-4
 }
 
-.container{
-    @apply max-w-screen-lg mx-auto
+.contained{
+    @apply max-w-screen-lg mx-auto px-4
+}
+
+.section{
+    @apply py-20
 }
