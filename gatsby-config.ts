@@ -49,4 +49,8 @@ const config: GatsbyConfig = {
   ],
 }
 
+module.exports = {
+  pathPrefix: "/cms",
+}
+
 export default config;
