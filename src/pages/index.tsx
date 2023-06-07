@@ -9,7 +9,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 
   return (
     <main className="p-20">
-      <GatsbyImage image={image!} alt={"logo"} className="w-14 mb-8" />
+      <GatsbyImage image={image!} alt={"logo"} className="w-14 mb-10" />
       <h1 className="text-3xl font-bold text-gray-700 mb-6">Projects</h1>
       <ul>
         {data.allMdx.nodes.map((node, idx) => (
